@@ -1,0 +1,38 @@
+[package]
+name = "binator"
+authors = ["Stargateur"]
+version = "0.0.2"
+description = "Contains all binator"
+license = "Zlib"
+repository = "https://github.com/binator/self"
+readme = "readme.md"
+keywords = ["parsing", "combinator", "utils"]
+categories = ["parsing"]
+edition = "2021"
+
+include = [
+  "readme.md",
+  "license.md",
+  "Cargo.toml",
+  "rustfmt.toml",
+  "src/**/*.rs",
+]
+
+[profile.release]
+lto = true
+codegen-units = 1
+opt-level = 3
+
+[profile.bench]
+lto = true
+codegen-units = 1
+opt-level = 3
+
+[dependencies]
+binator_core = { version = "0.0.2" }
+binator_utils = { version = "0.0.0" }
+binator_base = { version = "0.0.0" }
+binator_context = { version = "0.0.0" }
+binator_number = { version = "0.0.0" }
+binator_stream = { version = "0.0.0" }
+binator_nom = { version = "0.0.0" }
