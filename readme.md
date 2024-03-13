@@ -1,31 +1,22 @@
-todo:
-
-- orcontext name problem
-- find a way to control color // pffffffff terminal sux
-- any => one ?
-- add expected len // no need
-- diff better error ?
-- span atom stand alone with token ?
-- try version of try_ are missing Atom
-- consider merging number and base
-
 ## Example
 
 The very same hex color example from nom but using binator:
 
 ```rust
-use binator_base::is;
-use binator_core::{
-  Parse,
-  Parsed,
+use binator::{
+  base::is,
+  context::Ignore,
+  core::{
+    Parse,
+    Parsed,
+  },
+  number::{
+    uint_radix,
+    IntRadixParse,
+    Radix,
+  },
+  utils::Utils,
 };
-use binator_context::Ignore;
-use binator_number::{
-  uint_radix,
-  IntRadixParse,
-  Radix,
-};
-use binator_utils::Utils;
 
 #[derive(Debug, PartialEq)]
 pub struct Color {

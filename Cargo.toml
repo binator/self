@@ -1,7 +1,7 @@
 [package]
 name = "binator"
 authors = ["Stargateur"]
-version = "0.0.2"
+version = "0.0.3"
 description = "Contains all binator"
 license = "Zlib"
 repository = "https://github.com/binator/self"
@@ -32,7 +32,7 @@ opt-level = 3
 binator_core = { version = "0.0.2" }
 binator_utils = { version = "0.0.0" }
 binator_base = { version = "0.0.0" }
-binator_context = { version = "0.0.0" }
+binator_context = { version = "0.0.2" }
 binator_number = { version = "0.0.0" }
 binator_stream = { version = "0.0.0" }
 binator_nom = { version = "0.0.0" }
