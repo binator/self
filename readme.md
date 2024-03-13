@@ -2,12 +2,12 @@
 
 For now, binator is trying to be split with several crates, but this crate group them all together.
 
-binator_core contains all core traits of binator, implement them on std and Rust type.
-binator_context contains structure that will hold the error in your parser, you can ignore them, use a stack of error or even have a full tree of all errors that your parsers generated.
-binator_base contains basic combinator that you start from to make parser, for example, you want the ascii char 'i', you start with `is(b'i')`.
-binator_utils contains combinator that you can use to control loop, valid data and more. Like you want as many `i` as possible `is(b'i').fold_bounds(.., || (), Acc::acc)`. When you get used to it this `fold_bounds` do everything you need.
-binator_number contains combinator to parse number. Like `uint_radix` that will use internally `fold_bounds` to parse a number.
-binator_nom that just contains a combinator to interface with nom 7.
+* binator_core contains all core traits of binator, implement them on std and Rust type.
+* binator_context contains structure that will hold the error in your parser, you can ignore them, use a stack of error or even have a full tree of all errors that your parsers generated.
+* binator_base contains basic combinator that you start from to make parser, for example, you want the ascii char 'i', you start with `is(b'i')`.
+* binator_utils contains combinator that you can use to control loop, valid data and more. Like you want as many `i` as possible `is(b'i').fold_bounds(.., || (), Acc::acc)`. When you get used to it this `fold_bounds` do everything you need.
+* binator_number contains combinator to parse number. Like `uint_radix` that will use internally `fold_bounds` to parse a number.
+* binator_nom that just contains a combinator to interface with nom 7.
 
 ## Example
 
@@ -64,6 +64,8 @@ assert_eq!(
   }
 );
 ```
+
+Bigger example, a little json parser [here](https://github.com/binator/json)
 
 ## Influence
 
