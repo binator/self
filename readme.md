@@ -65,7 +65,7 @@ assert_eq!(
 );
 ```
 
-Bigger example, a little json parser [here](https://github.com/binator/json)
+Bigger example, a little json parser [here](https://github.com/binator/json), or a network packet parser [here](https://github.com/binator/network).
 
 ## Influence
 
