@@ -1,1 +1,1 @@
-context contains structure that will hold the error in your parser, you can ignore them, use a stack of error or even have a full tree of all errors that your parsers generated.
+Contains structure that will hold the failure in your parser, you can ignore them, use a stack or even have a full tree of all failures that your parsers generated.

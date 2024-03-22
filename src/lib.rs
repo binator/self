@@ -1,3 +1,5 @@
+//! To learn how to use binator read [crate::core] doc.
+
 #![doc = include_str!("../readme.md")]
 #![cfg_attr(not(feature = "std"), no_std)]
 #![warn(clippy::missing_const_for_fn)]

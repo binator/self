@@ -1,1 +1,1 @@
-base contains basic combinator that you start from to make parser, for example, you want the ascii char 'i', you start with `is(b'i')`. Or number like "42" (`uint_radix`), or binary form number (`u16_be`)
+Contains basic combinator that you start from to make parser, for example, you want the ascii char 'i', you start with `is(b'i')`. Or number like "42" (`uint_radix`), or binary form number (`u16_be`)

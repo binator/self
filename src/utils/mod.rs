@@ -124,13 +124,6 @@ impl<Stream> Display for UtilsAtom<Stream> {
 }
 
 /// Extend Parse trait with combinator
-///
-/// Combinator about branching: [Utils::and], [Utils::or].
-///
-/// Combinator about looping: [Utils::fold_bounds] (and rest of fold family),
-/// [Utils::fill].
-///
-/// Combinator often used: [Utils::opt], [Utils::map], [Utils::span].
 pub trait Utils<Stream, Context>: Sized + Parse<Stream, Context>
 where
   Stream: Streaming,

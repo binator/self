@@ -2,8 +2,6 @@
 
 Binator is a parser combinator like nom or combine. It's require nightly to use experimental feature try trait and trait alias.
 
-To learn how to use binator read [crate::core] doc, but you should read the following first.
-
 ## Example
 
 The very same hex color example from nom but using binator:
