@@ -1,1 +1,1 @@
-This crate content context container implementation for Binator.
+context contains structure that will hold the error in your parser, you can ignore them, use a stack of error or even have a full tree of all errors that your parsers generated.

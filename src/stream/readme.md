@@ -1,0 +1,1 @@
+Stream contains structure that can be used as Stream.
