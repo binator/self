@@ -1,6 +1,6 @@
 use crate::{
   base::{
-    digit,
+    ascii::digit,
     BaseAtom,
   },
   core::{

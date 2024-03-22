@@ -1,7 +1,7 @@
 #![doc = include_str!("readme.md")]
 
-mod ascii;
-pub use ascii::*;
+/// Combinator about ascii character
+pub mod ascii;
 
 mod tag;
 pub use tag::*;
@@ -53,8 +53,8 @@ mod radix;
 #[cfg(feature = "radix")]
 pub use radix::*;
 
-mod primitive;
-pub use primitive::*;
+/// Combinator about binary number
+pub mod primitive;
 
 mod float;
 pub use float::*;

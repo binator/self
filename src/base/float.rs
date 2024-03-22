@@ -10,11 +10,11 @@ use stdcore::{
 
 use crate::{
   base::{
+    ascii::AsciiParse,
     is,
     sign,
     tag_no_case,
     to_digit,
-    AsciiParse,
     BaseAtom,
   },
   core::{
