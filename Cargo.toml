@@ -1,7 +1,7 @@
 [package]
 name = "binator"
 authors = ["Stargateur <plaskowski.stanislas@gmail.com>"]
-version = "0.1.0"
+version = "0.1.1"
 description = "Parser Combinator"
 license = "Zlib"
 repository = "https://github.com/binator/self"
@@ -33,7 +33,8 @@ codegen-units = 1
 opt-level = 3
 
 [features]
-default = ["stack", "tree", "alloc", "radix", "serde", "hashmap", "std", "smallvec/serde"]
+default = ["stack", "tree", "alloc", "radix", "serde", "hashmap", "std", "smallvec/serde",
+           "either", "tracing"]
 std = ["alloc"]
 alloc = []
 hashmap = ["std"]
@@ -41,8 +42,8 @@ stack = ["smallvec"]
 tree = ["smallvec", "alloc"]
 radix = ["num-traits"]
 serde = ["dep:serde"]
-
-[dependencies]
+either = ["dep:either"]
+tracing = ["dep:tracing"]
 
 [dependencies.paste]
 version = "1"
@@ -61,6 +62,7 @@ default-features = false
 version = "0.1"
 optional = true
 default-features = false
+features = ["attributes"]
 
 [dependencies.serde]
 version = "1.0"
