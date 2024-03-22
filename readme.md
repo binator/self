@@ -95,7 +95,7 @@ This project choice the [Zlib license] because it's almost like MIT, but it's mo
 
 Unless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, shall be licensed as above (Zlib licence), without any additional terms or conditions. Big contributor will eventually be added to author list.
 
-[![Binator Contributors](https://contributors-img.web.app/image?repo=Stargateur/binator)](https://github.com/Stargateur/binator/graphs/contributors)
+[![Binator Contributors](https://contributors-img.web.app/image?repo=binator/self)](https://github.com/binator/self/graphs/contributors)
 
 ## Grammar
 
