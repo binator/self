@@ -1,13 +1,10 @@
 ## Organization
 
-For now, binator is trying to be split with several crates, but this crate group them all together.
-
-* binator_core contains all core traits of binator, implement them on std and Rust type.
-* binator_context contains structure that will hold the error in your parser, you can ignore them, use a stack of error or even have a full tree of all errors that your parsers generated.
-* binator_base contains basic combinator that you start from to make parser, for example, you want the ascii char 'i', you start with `is(b'i')`.
-* binator_utils contains combinator that you can use to control loop, valid data and more. Like you want as many `i` as possible `is(b'i').fold_bounds(.., || (), Acc::acc)`. When you get used to it this `fold_bounds` do everything you need.
-* binator_number contains combinator to parse number. Like `uint_radix` that will use internally `fold_bounds` to parse a number.
-* binator_nom that just contains a combinator to interface with nom 7.
+* core contains all core traits of binator, implement them on std and Rust type.
+* context contains structure that will hold the error in your parser, you can ignore them, use a stack of error or even have a full tree of all errors that your parsers generated.
+* base contains basic combinator that you start from to make parser, for example, you want the ascii char 'i', you start with `is(b'i')`.
+* utils contains combinator that you can use to control loop, valid data and more. Like you want as many `i` as possible `is(b'i').fold_bounds(.., || (), Acc::acc)`. When you get used to it this `fold_bounds` do everything you need.
+* number contains combinator to parse number. Like `uint_radix` that will use internally `fold_bounds` to parse a number.
 
 ## Example
 
@@ -76,7 +73,7 @@ Bigger example, a little json parser [here](https://github.com/binator/json), or
 
 binator use alias trait and try trait to provide a better experience, but this require nightly.
 
-nom can handle both octet and char, binator only take octet. Don't run yet ! binator make the choice to include an utf8 combinator, this mean where in nom you need two versions of each combinator, one for character, one for octet, binator you just need one for octet, and you must use our utf8 conbinator (or you can code yours) when you expect utf8 in your data. We do not want you to validate your data to be valid utf8 and then parse it. Also, for incomplete data is way better. Bonus, in theory this is faster.
+nom can handle both octet and char, binator only take octet. Don't run yet ! binator make the choice to include an utf8 combinator, this mean where in nom you need two versions of each combinator, one for character, one for octet, binator you just need one for octet, and you must use our utf8 combinator (or you can code yours) when you expect utf8 in your data. We do not want you to validate your data to be valid utf8 and then parse it. Also, for incomplete data is way better. Bonus, in theory this is faster.
 
 Error in binator are way more flexible than in nom, you can create your own error, and there will be added to the pool of error of the big parser you are building. All error are flatten no matter where you create then, this mean your custom error is the same level as binator error, there is no difference between them. This is done with the work of generic that can make hard to work with binator. Nom choice to be more simple on that, limiting the customization of user error.
 

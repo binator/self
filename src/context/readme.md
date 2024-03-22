@@ -1,0 +1,1 @@
+This crate content context container implementation for Binator.

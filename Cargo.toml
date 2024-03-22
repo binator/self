@@ -1,8 +1,8 @@
 [package]
 name = "binator"
-authors = ["Stargateur"]
-version = "0.0.3"
-description = "Contains all binator"
+authors = ["Stargateur <plaskowski.stanislas@gmail.com>"]
+version = "0.1.0"
+description = "Parser Combinator"
 license = "Zlib"
 repository = "https://github.com/binator/self"
 readme = "readme.md"
@@ -14,9 +14,13 @@ include = [
   "readme.md",
   "license.md",
   "Cargo.toml",
+  "build.rs",
   "rustfmt.toml",
   "src/**/*.rs",
 ]
+
+[package.metadata.docs.rs]
+all-features = true
 
 [profile.release]
 lto = true
@@ -28,11 +32,63 @@ lto = true
 codegen-units = 1
 opt-level = 3
 
+[features]
+default = ["stack", "tree", "alloc", "radix", "serde", "hashmap", "std", "smallvec/serde"]
+std = ["alloc"]
+alloc = []
+hashmap = ["std"]
+stack = ["smallvec"]
+tree = ["smallvec", "alloc"]
+radix = ["num-traits"]
+serde = ["dep:serde"]
+
 [dependencies]
-binator_core = { version = "0.0.2" }
-binator_utils = { version = "0.0.0" }
-binator_base = { version = "0.0.0" }
-binator_context = { version = "0.0.2" }
-binator_number = { version = "0.0.0" }
-binator_stream = { version = "0.0.0" }
-binator_nom = { version = "0.0.0" }
+
+[dependencies.paste]
+version = "1"
+default-features = false
+
+[dependencies.owo-colors]
+version = "3"
+default-features = false
+
+[dependencies.num-traits]
+version = "0.2"
+optional = true
+default-features = false
+
+[dependencies.tracing]
+version = "0.1"
+optional = true
+default-features = false
+
+[dependencies.serde]
+version = "1.0"
+optional = true
+default-features = false
+features = ["derive"]
+
+[dependencies.either]
+version = "1.7"
+optional = true
+default-features = false
+
+[dependencies.smallvec]
+version = "1.7"
+optional = true
+default-features = false
+features = ["const_new", "union", "const_generics"]
+
+[dev-dependencies]
+derive_more = "0.99"
+derive-new = "0.5"
+rand = "0.8.4"
+tracing = "0.1"
+tracing-subscriber = {version = "0.3", features = ["env-filter", "fmt"]}
+env_logger = "0.9"
+test-log = { version = "0.2.10", features = ["trace"] }
+
+[build-dependencies]
+quote = "1"
+rustfmt-wrapper = "0.1"
+syn = "1"
