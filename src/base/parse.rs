@@ -1,6 +1,6 @@
 use core::fmt::Debug;
 
-use crate::core::Parse;
+use crate::Parse;
 
 /// Take a parser and return a Parser that will call parse on it.
 pub fn parse<Stream, Context, Parser>(

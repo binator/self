@@ -1,11 +1,9 @@
 use crate::{
-  core::{
-    Contexting,
-    Parse,
-    Parsed,
-    Streaming,
-  },
   utils::UtilsAtom,
+  Contexting,
+  Parse,
+  Parsed,
+  Streaming,
 };
 
 /// Implementation of [crate::utils::Utils::fold_until]

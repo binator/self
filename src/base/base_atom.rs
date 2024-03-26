@@ -1,4 +1,4 @@
-use stdcore::fmt::{
+use core::fmt::{
   Debug,
   Display,
   Formatter,

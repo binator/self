@@ -5,17 +5,15 @@ use crate::{
     any,
     BaseAtom,
   },
-  core::{
-    Contexting,
-    CoreAtom,
-    Parse,
-    Parsed,
-    Streaming,
-  },
   utils::{
     Utils,
     UtilsAtom,
   },
+  Contexting,
+  CoreAtom,
+  Parse,
+  Parsed,
+  Streaming,
 };
 
 /// Take a list of T and return a Parser that will partially Eq in order Item

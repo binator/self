@@ -13,13 +13,11 @@ use core::{
 };
 
 use crate::{
-  core::{
-    Contexting,
-    Parse,
-    Parsed,
-    Streaming,
-  },
   utils::UtilsAtom,
+  Contexting,
+  Parse,
+  Parsed,
+  Streaming,
 };
 
 /// Implementation of [crate::utils::Utils::try_fold_bounds]
@@ -345,17 +343,15 @@ mod tests {
       Keep,
       Last,
     },
-    core::{
-      Contexting,
-      CoreAtom,
-      Parse,
-      Parsed,
-      Streaming,
-    },
     utils::{
       Utils,
       UtilsAtom,
     },
+    Contexting,
+    CoreAtom,
+    Parse,
+    Parsed,
+    Streaming,
   };
 
   #[derive(Display, Debug, Clone, From, PartialEq)]

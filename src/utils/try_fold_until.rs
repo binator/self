@@ -4,13 +4,11 @@ use core::ops::{
 };
 
 use crate::{
-  core::{
-    Contexting,
-    Parse,
-    Parsed,
-    Streaming,
-  },
   utils::UtilsAtom,
+  Contexting,
+  Parse,
+  Parsed,
+  Streaming,
 };
 
 /// Implementation of [crate::utils::Utils::try_fold_until]

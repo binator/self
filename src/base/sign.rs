@@ -3,17 +3,15 @@ use crate::{
     is,
     BaseAtom,
   },
-  core::{
-    Contexting,
-    CoreAtom,
-    Parse,
-    Parsed,
-    Streaming,
-  },
   utils::{
     Utils,
     UtilsAtom,
   },
+  Contexting,
+  CoreAtom,
+  Parse,
+  Parsed,
+  Streaming,
 };
 
 /// Enum that hold Sign value

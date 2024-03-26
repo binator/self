@@ -1,3 +1,13 @@
+use core::{
+  fmt::{
+    self,
+    Debug,
+    Display,
+    Formatter,
+  },
+  marker::PhantomData,
+};
+
 use num_traits::{
   cast::AsPrimitive,
   identities::Zero,
@@ -11,15 +21,6 @@ use num_traits::{
   },
   CheckedSub,
 };
-use stdcore::{
-  fmt::{
-    self,
-    Debug,
-    Display,
-    Formatter,
-  },
-  marker::PhantomData,
-};
 
 use crate::{
   base::{
@@ -28,19 +29,17 @@ use crate::{
     BaseAtom,
     Sign,
   },
-  core::{
-    Contexting,
-    CoreAtom,
-    Parse,
-    Parsed,
-    Streaming,
-    Success,
-  },
   utils::{
     TryFoldBoundsParse,
     Utils,
     UtilsAtom,
   },
+  Contexting,
+  CoreAtom,
+  Parse,
+  Parsed,
+  Streaming,
+  Success,
 };
 
 /// Represent Radix, used to limit radix <= 36
@@ -309,13 +308,11 @@ mod tests {
   use crate::{
     base::BaseAtom,
     context::Tree,
-    core::{
-      CoreAtom,
-      Parse,
-      Parsed,
-      Streaming,
-    },
     utils::UtilsAtom,
+    CoreAtom,
+    Parse,
+    Parsed,
+    Streaming,
   };
 
   #[derive(Display, Debug, Clone, From)]

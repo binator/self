@@ -5,14 +5,12 @@ use crate::{
     any,
     BaseAtom,
   },
-  core::{
-    Contexting,
-    CoreAtom,
-    Parse,
-    Parsed,
-    Streaming,
-  },
   utils::Utils,
+  Contexting,
+  CoreAtom,
+  Parse,
+  Parsed,
+  Streaming,
 };
 
 /// Will check if next Item from Stream is partially equal

@@ -1,6 +1,6 @@
 //! ASCII Core Rules (RFC5234 B.1.)
 
-use stdcore::fmt::{
+use core::fmt::{
   self,
   Display,
   Formatter,
@@ -8,8 +8,8 @@ use stdcore::fmt::{
 
 use crate::{
   base::*,
-  core::*,
   utils::*,
+  *,
 };
 
 /// Meta trait for ascii combinator

@@ -3,15 +3,13 @@ use crate::{
     octet,
     BaseAtom,
   },
-  core::{
-    Contexting,
-    CoreAtom,
-    Parse,
-    Parsed,
-    Streaming,
-    Success,
-  },
   utils::Utils,
+  Contexting,
+  CoreAtom,
+  Parse,
+  Parsed,
+  Streaming,
+  Success,
 };
 
 fn raw<Stream, Context>(stream: Stream) -> Parsed<u32, Stream, Context>
@@ -82,7 +80,7 @@ where
 mod tests {
   use crate::{
     context::Ignore,
-    core::Parsed,
+    Parsed,
   };
 
   #[test]

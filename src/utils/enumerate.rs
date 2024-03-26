@@ -1,6 +1,6 @@
 use core::mem;
 
-use crate::core::{
+use crate::{
   Parse,
   Parsed,
 };

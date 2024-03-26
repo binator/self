@@ -13,7 +13,7 @@ use core::{
   },
 };
 
-use crate::core::{
+use crate::{
   Contexting,
   ParsedAux,
   ProvideElement,
@@ -291,7 +291,7 @@ where
 
 #[cfg(test)]
 mod tests {
-  use crate::core::{
+  use crate::{
     Parsed,
     Success,
   };

@@ -1,6 +1,6 @@
 use core::fmt::Debug;
 
-use crate::core::{
+use crate::{
   Parse,
   Parsed,
   ProvideElement,

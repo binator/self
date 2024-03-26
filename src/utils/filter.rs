@@ -1,10 +1,8 @@
 use crate::{
-  core::{
-    Contexting,
-    Parse,
-    Parsed,
-  },
   utils::UtilsAtom,
+  Contexting,
+  Parse,
+  Parsed,
 };
 
 /// Implementation of [crate::utils::Utils::filter]

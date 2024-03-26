@@ -17,10 +17,8 @@ use crate::{
     First,
     Last,
   },
-  core::{
-    Contexting,
-    ProvideElement,
-  },
+  Contexting,
+  ProvideElement,
 };
 
 /// Will keep the last Stack of elements feed to it.

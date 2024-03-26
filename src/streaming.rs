@@ -1,4 +1,4 @@
-use stdcore::{
+use core::{
   convert::Infallible,
   fmt::Debug,
   ops::{
@@ -8,7 +8,7 @@ use stdcore::{
   },
 };
 
-use crate::core::Success;
+use crate::Success;
 
 /// This trait must be implement by all struct that want to be a stream for
 /// binator.

@@ -1,4 +1,4 @@
-use crate::core::Push;
+use crate::utils::Push;
 
 /// This is very usefull to be use on combinator like fold.
 /// For example, `.fold_bounds(.., Vec::new, Acc::acc)`.

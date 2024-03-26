@@ -1,4 +1,4 @@
-use stdcore::{
+use core::{
   fmt::{
     self,
     Debug,
@@ -17,19 +17,17 @@ use crate::{
     to_digit,
     BaseAtom,
   },
-  core::{
-    Acc,
-    Contexting,
-    CoreAtom,
-    Parse,
-    Parsed,
-    Streaming,
-    Success,
-  },
   utils::{
+    Acc,
     Utils,
     UtilsAtom,
   },
+  Contexting,
+  CoreAtom,
+  Parse,
+  Parsed,
+  Streaming,
+  Success,
 };
 
 /// Information about float failure
@@ -178,13 +176,11 @@ mod tests {
   use crate::{
     base::BaseAtom,
     context::Tree,
-    core::{
-      CoreAtom,
-      Parse,
-      Parsed,
-      Streaming,
-    },
     utils::UtilsAtom,
+    CoreAtom,
+    Parse,
+    Parsed,
+    Streaming,
   };
 
   #[derive(Display, Debug, Clone, From)]

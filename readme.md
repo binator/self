@@ -8,6 +8,8 @@ The very same hex color example from nom but using binator:
 
 ```rust
 use binator::{
+  Parse,
+  Parsed,
   base::{
     is,
     uint_radix,
@@ -15,10 +17,6 @@ use binator::{
     Radix,
   },
   context::Ignore,
-  core::{
-    Parse,
-    Parsed,
-  },
   utils::Utils,
 };
 

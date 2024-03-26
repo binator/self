@@ -1,4 +1,4 @@
-use crate::core::TryPush;
+use crate::utils::TryPush;
 
 /// This is very usefull to be use on combinator like try_fold.
 /// For example, `.try_fold_bounds(.., || Ok(Vec::new), TryAcc::try_acc)`.

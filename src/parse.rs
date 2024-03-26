@@ -3,7 +3,7 @@ use core::{
   ops::BitOr,
 };
 
-use crate::core::{
+use crate::{
   Parsed,
   Streaming,
   Success,
@@ -106,7 +106,7 @@ impl<Stream, Context> Parse<Stream, Context> for () {
 mod tests {
   use core::ops::BitOr;
 
-  use crate::core::{
+  use crate::{
     Parse,
     Parsed,
     Streaming,

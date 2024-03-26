@@ -16,7 +16,7 @@ use core::{
   },
 };
 
-use crate::core::{
+use crate::{
   Contexting,
   Parse,
   Parsed,
@@ -79,6 +79,19 @@ pub use limit::*;
 
 mod add_atom;
 pub use add_atom::*;
+
+mod acc;
+pub use acc::*;
+mod try_acc;
+pub use try_acc::*;
+mod extend;
+pub use extend::*;
+mod try_extend;
+pub use try_extend::*;
+mod push;
+pub use push::*;
+mod try_push;
+pub use try_push::*;
 
 /// Atom for most utils combinator
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]

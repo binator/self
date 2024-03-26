@@ -1,12 +1,10 @@
 use crate::{
   base::octet,
-  core::{
-    Contexting,
-    CoreAtom,
-    Parse,
-    Streaming,
-  },
   utils::Utils,
+  Contexting,
+  CoreAtom,
+  Parse,
+  Streaming,
 };
 
 /// Used by nbit to represent n only if 0 > n > 8
@@ -65,7 +63,7 @@ where
     feature = "tracing",
     tracing::instrument(level = "trace", name = "nbit", skip_all, ret(Display))
   )]
-  fn parse(&mut self, stream: Stream) -> crate::core::Parsed<Self::Token, Stream, Context> {
+  fn parse(&mut self, stream: Stream) -> crate::Parsed<Self::Token, Stream, Context> {
     octet
       .map(|b| (b >> self.n, b & u8::MAX >> (8 - self.n)))
       .parse(stream)
@@ -77,7 +75,7 @@ mod tests {
   use super::*;
   use crate::{
     context::*,
-    core::*,
+    *,
   };
 
   #[test]

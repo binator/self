@@ -1,22 +1,19 @@
 use alloc::rc::Rc;
+use core::{
+  cell::UnsafeCell,
+  fmt::Debug,
+  slice::from_raw_parts_mut,
+};
 use std::io::{
   self,
   Read,
 };
 
-use stdcore::{
-  cell::UnsafeCell,
-  fmt::Debug,
-  slice::from_raw_parts_mut,
-};
-
 use crate::{
-  core::{
-    Split,
-    Streaming,
-    Success,
-  },
   stream::Position,
+  Split,
+  Streaming,
+  Success,
 };
 
 #[derive(Debug)]

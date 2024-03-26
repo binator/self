@@ -1,6 +1,6 @@
 use core::ops::BitOr;
 
-use crate::core::{
+use crate::{
   Parse,
   Parsed,
 };

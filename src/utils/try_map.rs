@@ -3,7 +3,7 @@ use core::ops::{
   Try,
 };
 
-use crate::core::{
+use crate::{
   Parse,
   Parsed,
 };

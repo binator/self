@@ -1,13 +1,11 @@
 use core::mem::MaybeUninit;
 
 use crate::{
-  core::{
-    Contexting,
-    Parse,
-    Parsed,
-    Streaming,
-  },
   utils::UtilsAtom,
+  Contexting,
+  Parse,
+  Parsed,
+  Streaming,
 };
 
 /// Implementation of [crate::utils::Utils::fill]
@@ -82,8 +80,8 @@ mod tests {
       Keep,
       Last,
     },
-    core::CoreAtom,
     utils::Utils,
+    CoreAtom,
   };
 
   type HandleAtom<Stream> = Keep<Last, Context<Stream>>;

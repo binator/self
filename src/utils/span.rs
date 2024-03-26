@@ -1,12 +1,10 @@
 use crate::{
-  core::{
-    Contexting,
-    Parse,
-    Parsed,
-    Streaming,
-    Success,
-  },
   utils::UtilsAtom,
+  Contexting,
+  Parse,
+  Parsed,
+  Streaming,
+  Success,
 };
 
 /// Implementation of [crate::utils::Utils::span]

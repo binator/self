@@ -5,7 +5,7 @@ use core::{
   ops::Range,
 };
 
-use crate::core::{
+use crate::{
   Split,
   Streaming,
   Success,

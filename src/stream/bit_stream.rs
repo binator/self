@@ -6,7 +6,7 @@ use core::{
   },
 };
 
-use crate::core::{
+use crate::{
   SplitError,
   SplitFirst,
   UtilsStream,

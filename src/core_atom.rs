@@ -1,10 +1,10 @@
-use stdcore::fmt::{
+use core::fmt::{
   Debug,
   Display,
   Formatter,
 };
 
-use crate::core::*;
+use crate::*;
 
 #[derive(Debug, Clone, PartialEq, Eq)]
 /// Core context used to implement context for basic type like u8
