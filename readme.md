@@ -1,3 +1,6 @@
+[![license](https://img.shields.io/badge/license-zlib-blue.svg)](license.md)
+[![crates.io Version](https://img.shields.io/crates/v/binator.svg)](https://crates.io/crates/binator)
+
 ## Binator
 
 Binator is a parser combinator like nom or combine. It's require nightly to use experimental feature try trait and trait alias.
