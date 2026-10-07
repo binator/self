@@ -9,25 +9,25 @@ use core::{
 };
 
 use crate::{
-  base::{
-    ascii::AsciiParse,
-    is,
-    sign,
-    tag_no_case,
-    to_digit,
-    BaseAtom,
-  },
-  utils::{
-    Acc,
-    Utils,
-    UtilsAtom,
-  },
   Contexting,
   CoreAtom,
   Parse,
   Parsed,
   Streaming,
   Success,
+  base::{
+    BaseAtom,
+    ascii::AsciiParse,
+    is,
+    sign,
+    tag_no_case,
+    to_digit,
+  },
+  utils::{
+    Acc,
+    Utils,
+    UtilsAtom,
+  },
 };
 
 /// Information about float failure
@@ -170,17 +170,17 @@ mod tests {
   use test_log::test;
 
   use super::{
-    float,
     FloatAtom,
+    float,
   };
   use crate::{
-    base::BaseAtom,
-    context::Tree,
-    utils::UtilsAtom,
     CoreAtom,
     Parse,
     Parsed,
     Streaming,
+    base::BaseAtom,
+    context::Tree,
+    utils::UtilsAtom,
   };
 
   #[derive(Display, Debug, Clone, From)]

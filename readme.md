@@ -98,6 +98,8 @@ Unless you explicitly state otherwise, any contribution intentionally submitted 
 
 I'm clearly not an English native speaker, so I would accept PR that make documentation more clear, however, I don't want small correction like "US vs UK" version, I don't want PR that just remove space before "!" or "?", because I'm French and I like it that way. I want PR that respect the original author that write the sentence, but if you add new sentence use your own style. In summary, I will accept any PR that add clarity, but not grammar zealot PR.
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/R6R6CV9LW)
+
 [License]: license.md
 [Zlib license]: https://choosealicense.com/licenses/zlib/
 [`crates.io`]: https://crates.io

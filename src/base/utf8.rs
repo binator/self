@@ -1,15 +1,15 @@
 use crate::{
-  base::{
-    octet,
-    BaseAtom,
-  },
-  utils::Utils,
   Contexting,
   CoreAtom,
   Parse,
   Parsed,
   Streaming,
   Success,
+  base::{
+    BaseAtom,
+    octet,
+  },
+  utils::Utils,
 };
 
 fn raw<Stream, Context>(stream: Stream) -> Parsed<u32, Stream, Context>
@@ -79,8 +79,8 @@ where
 #[cfg(test)]
 mod tests {
   use crate::{
-    context::Ignore,
     Parsed,
+    context::Ignore,
   };
 
   #[test]

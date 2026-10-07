@@ -1,17 +1,17 @@
 use crate::{
-  base::{
-    ascii::digit,
-    BaseAtom,
-  },
-  utils::{
-    Utils,
-    UtilsAtom,
-  },
   Contexting,
   CoreAtom,
   Parse,
   Parsed,
   Streaming,
+  base::{
+    BaseAtom,
+    ascii::digit,
+  },
+  utils::{
+    Utils,
+    UtilsAtom,
+  },
 };
 
 /// Parse character digit and return it in integer format

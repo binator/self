@@ -1,10 +1,10 @@
 use crate::{
-  base::any,
   Contexting,
   CoreAtom,
   Parse,
   Parsed,
   Streaming,
+  base::any,
 };
 
 /// Context from end_of_stream parser.

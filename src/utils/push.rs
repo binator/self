@@ -36,7 +36,8 @@ pub trait Push {
 #[cfg(feature = "alloc")]
 impl<Item> Push for alloc::vec::Vec<Item> {
   type Item = Item;
-  type ItemView<'a> = &'a mut Self::Item
+  type ItemView<'a>
+    = &'a mut Self::Item
   where
     Self: 'a;
 
@@ -61,7 +62,8 @@ impl Push for alloc::string::String {
 #[cfg(feature = "alloc")]
 impl<Item> Push for VecDeque<Item> {
   type Item = Item;
-  type ItemView<'a> = &'a mut Self::Item
+  type ItemView<'a>
+    = &'a mut Self::Item
   where
     Self: 'a;
 
@@ -75,7 +77,8 @@ impl<Item> Push for VecDeque<Item> {
 impl<Key: Ord, Value> Push for BTreeMap<Key, Value> {
   type Item = (Key, Value);
   // Not happy
-  type ItemView<'a> = Option<Value>
+  type ItemView<'a>
+    = Option<Value>
   where
     Self: 'a;
 
@@ -88,7 +91,8 @@ impl<Key: Ord, Value> Push for BTreeMap<Key, Value> {
 impl<Item: Ord> Push for BinaryHeap<Item> {
   type Item = Item;
   // not happy
-  type ItemView<'a> = ()
+  type ItemView<'a>
+    = ()
   where
     Self: 'a;
 
@@ -101,7 +105,8 @@ impl<Item: Ord> Push for BinaryHeap<Item> {
 impl<Key: Eq + Hash, Value, Seed: BuildHasher> Push for HashMap<Key, Value, Seed> {
   type Item = (Key, Value);
   // Not happy
-  type ItemView<'a> = Option<Value>
+  type ItemView<'a>
+    = Option<Value>
   where
     Self: 'a;
 
@@ -114,7 +119,8 @@ impl<Key: Eq + Hash, Value, Seed: BuildHasher> Push for HashMap<Key, Value, Seed
 impl<Item: Eq + Hash, Seed: BuildHasher> Push for HashSet<Item, Seed> {
   type Item = Item;
   // Not happy
-  type ItemView<'a> = bool
+  type ItemView<'a>
+    = bool
   where
     Self: 'a;
 
@@ -127,7 +133,8 @@ impl<Item: Eq + Hash, Seed: BuildHasher> Push for HashSet<Item, Seed> {
 impl<Item: Ord> Push for BTreeSet<Item> {
   type Item = Item;
   // Not happy
-  type ItemView<'a> = bool
+  type ItemView<'a>
+    = bool
   where
     Self: 'a;
 
@@ -139,7 +146,8 @@ impl<Item: Ord> Push for BTreeSet<Item> {
 #[cfg(feature = "alloc")]
 impl<Item> Push for LinkedList<Item> {
   type Item = Item;
-  type ItemView<'a> = &'a mut Self::Item
+  type ItemView<'a>
+    = &'a mut Self::Item
   where
     Self: 'a;
 
@@ -152,7 +160,8 @@ impl<Item> Push for LinkedList<Item> {
 #[cfg(feature = "smallvec")]
 impl<Item, const N: usize> Push for SmallVec<[Item; N]> {
   type Item = Item;
-  type ItemView<'a> = &'a mut Self::Item
+  type ItemView<'a>
+    = &'a mut Self::Item
   where
     Self: 'a;
 

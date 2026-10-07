@@ -1,11 +1,11 @@
 use crate::{
-  base::any,
-  utils::Utils,
   Contexting,
   CoreAtom,
   Parse,
   Parsed,
   Streaming,
+  base::any,
+  utils::Utils,
 };
 
 /// Will read an item from the Stream and convert it to an octet

@@ -1,17 +1,17 @@
 use crate::{
-  base::{
-    take,
-    BaseAtom,
-  },
-  utils::{
-    Utils,
-    UtilsAtom,
-  },
   Contexting,
   CoreAtom,
   Parse,
   Parsed,
   Streaming,
+  base::{
+    BaseAtom,
+    take,
+  },
+  utils::{
+    Utils,
+    UtilsAtom,
+  },
 };
 
 /// Take a &'static str and return a Parser that will

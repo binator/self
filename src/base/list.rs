@@ -1,19 +1,19 @@
 use core::fmt::Debug;
 
 use crate::{
-  base::{
-    any,
-    BaseAtom,
-  },
-  utils::{
-    Utils,
-    UtilsAtom,
-  },
   Contexting,
   CoreAtom,
   Parse,
   Parsed,
   Streaming,
+  base::{
+    BaseAtom,
+    any,
+  },
+  utils::{
+    Utils,
+    UtilsAtom,
+  },
 };
 
 /// Take a list of T and return a Parser that will partially Eq in order Item

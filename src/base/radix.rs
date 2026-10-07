@@ -9,6 +9,7 @@ use core::{
 };
 
 use num_traits::{
+  CheckedSub,
   cast::AsPrimitive,
   identities::Zero,
   ops::checked::{
@@ -19,27 +20,26 @@ use num_traits::{
     Signed,
     Unsigned,
   },
-  CheckedSub,
 };
 
 use crate::{
-  base::{
-    octet,
-    sign,
-    BaseAtom,
-    Sign,
-  },
-  utils::{
-    TryFoldBoundsParse,
-    Utils,
-    UtilsAtom,
-  },
   Contexting,
   CoreAtom,
   Parse,
   Parsed,
   Streaming,
   Success,
+  base::{
+    BaseAtom,
+    Sign,
+    octet,
+    sign,
+  },
+  utils::{
+    TryFoldBoundsParse,
+    Utils,
+    UtilsAtom,
+  },
 };
 
 /// Represent Radix, used to limit radix <= 36
@@ -300,19 +300,19 @@ mod tests {
   use rand::Rng;
 
   use super::{
-    int_radix,
-    uint_radix,
     IntRadixAtom,
     Radix,
+    int_radix,
+    uint_radix,
   };
   use crate::{
-    base::BaseAtom,
-    context::Tree,
-    utils::UtilsAtom,
     CoreAtom,
     Parse,
     Parsed,
     Streaming,
+    base::BaseAtom,
+    context::Tree,
+    utils::UtilsAtom,
   };
 
   #[derive(Display, Debug, Clone, From)]

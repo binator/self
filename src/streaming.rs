@@ -4,6 +4,7 @@ use core::{
   ops::{
     ControlFlow,
     FromResidual,
+    Residual,
     Try,
   },
 };
@@ -75,6 +76,10 @@ impl<Item, Stream, Error> FromResidual for Split<Item, Stream, Error> {
       Split::Error(error) => Split::Error(error),
     }
   }
+}
+
+impl<Item, Stream, Error> Residual<Success<Item, Stream>> for Split<Infallible, Stream, Error> {
+  type TryType = Split<Item, Stream, Error>;
 }
 
 impl<Item, Stream, Error> Try for Split<Item, Stream, Error> {

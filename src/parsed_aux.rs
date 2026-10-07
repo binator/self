@@ -3,6 +3,7 @@ use core::{
   ops::{
     ControlFlow,
     FromResidual,
+    Residual,
     Try,
   },
 };
@@ -16,6 +17,10 @@ pub enum ParsedAux<Token, Context> {
   Failure(Context),
   /// Error
   Error(Context),
+}
+
+impl<Token, Context> Residual<Token> for ParsedAux<Infallible, Context> {
+  type TryType = ParsedAux<Token, Context>;
 }
 
 impl<Token, Context> FromResidual for ParsedAux<Token, Context> {

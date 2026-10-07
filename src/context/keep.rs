@@ -8,12 +8,12 @@ use core::{
 };
 
 use crate::{
+  Contexting,
+  ProvideElement,
   context::{
     First,
     Last,
   },
-  Contexting,
-  ProvideElement,
 };
 
 /// Will keep only the first or the last Element that was feed to it.

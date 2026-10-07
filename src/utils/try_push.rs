@@ -45,7 +45,8 @@ pub trait TryPush {
 impl<Item> TryPush for alloc::vec::Vec<Item> {
   type Error = (Self::Item, TryReserveError);
   type Item = Item;
-  type ItemView<'a> = &'a mut Self::Item
+  type ItemView<'a>
+    = &'a mut Self::Item
   where
     Self: 'a;
 
@@ -81,7 +82,8 @@ impl TryPush for alloc::string::String {
 impl<Item> TryPush for VecDeque<Item> {
   type Error = (Self::Item, TryReserveError);
   type Item = Item;
-  type ItemView<'a> = &'a mut Self::Item
+  type ItemView<'a>
+    = &'a mut Self::Item
   where
     Self: 'a;
 
@@ -101,7 +103,8 @@ impl<Key: Ord, Value> TryPush for BTreeMap<Key, Value> {
   type Error = (Self::Item, TryReserveError);
   type Item = (Key, Value);
   // Not happy
-  type ItemView<'a> = Option<Value>
+  type ItemView<'a>
+    = Option<Value>
   where
     Self: 'a;
 
@@ -115,7 +118,8 @@ impl<Item: Ord> TryPush for BinaryHeap<Item> {
   type Error = (Self::Item, TryReserveError);
   type Item = Item;
   // not happy
-  type ItemView<'a> = ()
+  type ItemView<'a>
+    = ()
   where
     Self: 'a;
 
@@ -135,7 +139,8 @@ impl<Key: Eq + Hash, Value, Seed: BuildHasher> TryPush for HashMap<Key, Value, S
   type Error = (Self::Item, TryReserveError);
   type Item = (Key, Value);
   // Not happy
-  type ItemView<'a> = Option<Value>
+  type ItemView<'a>
+    = Option<Value>
   where
     Self: 'a;
 
@@ -149,7 +154,8 @@ impl<Item: Eq + Hash, Seed: BuildHasher> TryPush for HashSet<Item, Seed> {
   type Error = (Self::Item, TryReserveError);
   type Item = Item;
   // Not happy
-  type ItemView<'a> = bool
+  type ItemView<'a>
+    = bool
   where
     Self: 'a;
 
@@ -163,7 +169,8 @@ impl<Item: Ord> TryPush for BTreeSet<Item> {
   type Error = (Self::Item, TryReserveError);
   type Item = Item;
   // Not happy
-  type ItemView<'a> = bool
+  type ItemView<'a>
+    = bool
   where
     Self: 'a;
 
@@ -176,7 +183,8 @@ impl<Item: Ord> TryPush for BTreeSet<Item> {
 impl<Item> TryPush for LinkedList<Item> {
   type Error = (Self::Item, TryReserveError);
   type Item = Item;
-  type ItemView<'a> = &'a mut Self::Item
+  type ItemView<'a>
+    = &'a mut Self::Item
   where
     Self: 'a;
 
@@ -190,7 +198,8 @@ impl<Item> TryPush for LinkedList<Item> {
 impl<Item, const N: usize> TryPush for SmallVec<[Item; N]> {
   type Error = (Self::Item, CollectionAllocErr);
   type Item = Item;
-  type ItemView<'a> = &'a mut Self::Item
+  type ItemView<'a>
+    = &'a mut Self::Item
   where
     Self: 'a;
 

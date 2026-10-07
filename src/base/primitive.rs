@@ -1,16 +1,16 @@
 use paste::paste;
 
 use crate::{
-  base::octet,
-  utils::{
-    Utils,
-    UtilsAtom,
-  },
   Contexting,
   CoreAtom,
   Parse,
   Parsed,
   Streaming,
+  base::octet,
+  utils::{
+    Utils,
+    UtilsAtom,
+  },
 };
 
 /// Meta trait for number

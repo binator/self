@@ -9,6 +9,7 @@ use core::{
   ops::{
     ControlFlow,
     FromResidual,
+    Residual,
     Try,
   },
 };
@@ -219,6 +220,12 @@ impl<Token, Stream, Context> FromResidual<Result<Infallible, Context>>
 //     unreachable!()
 //   }
 // }
+
+impl<Token, Stream, Context> Residual<Success<Token, Stream>>
+  for Parsed<Infallible, Infallible, Context>
+{
+  type TryType = Parsed<Token, Stream, Context>;
+}
 
 impl<Token, Stream, Context> Try for Parsed<Token, Stream, Context> {
   type Output = Success<Token, Stream>;

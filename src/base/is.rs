@@ -1,16 +1,16 @@
 use core::fmt::Debug;
 
 use crate::{
-  base::{
-    any,
-    BaseAtom,
-  },
-  utils::Utils,
   Contexting,
   CoreAtom,
   Parse,
   Parsed,
   Streaming,
+  base::{
+    BaseAtom,
+    any,
+  },
+  utils::Utils,
 };
 
 /// Return Success if item from stream is partially equal to t.

@@ -8,7 +8,7 @@ repository = "https://github.com/binator/self"
 readme = "readme.md"
 keywords = ["parsing", "combinator", "utils"]
 categories = ["parsing"]
-edition = "2021"
+edition = "2024"
 
 include = [
   "readme.md",

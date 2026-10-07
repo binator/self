@@ -10,10 +10,10 @@ use std::io::{
 };
 
 use crate::{
-  stream::Position,
   Split,
   Streaming,
   Success,
+  stream::Position,
 };
 
 #[derive(Debug)]

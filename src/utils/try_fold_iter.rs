@@ -4,12 +4,12 @@ use core::ops::{
 };
 
 use crate::{
-  utils::UtilsAtom,
   Contexting,
   Parse,
   Parsed,
   Streaming,
   Success,
+  utils::UtilsAtom,
 };
 
 /// Implementation of [crate::utils::Utils::try_fold_iter]

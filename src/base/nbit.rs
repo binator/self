@@ -1,10 +1,10 @@
 use crate::{
-  base::octet,
-  utils::Utils,
   Contexting,
   CoreAtom,
   Parse,
   Streaming,
+  base::octet,
+  utils::Utils,
 };
 
 /// Used by nbit to represent n only if 0 > n > 8

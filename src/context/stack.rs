@@ -8,17 +8,17 @@ use core::{
 };
 
 use smallvec::{
-  smallvec,
   SmallVec,
+  smallvec,
 };
 
 use crate::{
+  Contexting,
+  ProvideElement,
   context::{
     First,
     Last,
   },
-  Contexting,
-  ProvideElement,
 };
 
 /// Will keep the last Stack of elements feed to it.
